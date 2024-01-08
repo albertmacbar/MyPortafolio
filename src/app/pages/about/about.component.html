@@ -1,4 +1,4 @@
-<div class="ae-grid au-xs-ta-center au-mb-4">
+<!-- <div class="ae-grid au-xs-ta-center au-mb-4">
     <div class="ae-grid__item item-lg-4 ae-kappa au-mb-3">
         <img src="assets/img/team-1.jpg" alt="" class="au-mb-3">
         <h5 class="ae-u-bolder au-mt-2">Robert T. Williams</h5>
@@ -19,6 +19,20 @@
         <p class="ae-u-bolder au-mb-3">Art Director</p>
         <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#0" class="ae-u-bolder au-underline">@patrickanderson</a>
+    </div>
+</div> -->
+<div class="ae-grid au-xs-ta-center au-mb-4">
+    <div *ngFor="let person of dataPageService.dataWorkTeam" class="ae-grid__item item-lg-4 ae-kappa au-mb-3">
+        <img src="{{person.url}}" alt="" class="au-mb-3">
+        <h5 class="ae-u-bolder au-mt-2">{{person.name}}</h5>
+        <p class="ae-u-bolder au-mb-3">{{person.career}}</p>
+        <p class="au-lg-ta-left au-mb-3 au-pl-4 au-pr-4">{{person.phrase}}</p>
+        <a [href]="person.facebook" class="rk-social-btn " target="_blank">
+            <svg>
+              <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        <p><a [href]="person.facebook" class="ae-u-bolder au-underline" target="_blank">{{person.facebook}}</a></p>
     </div>
 </div>
 <div class="ae-grid au-pt-2">

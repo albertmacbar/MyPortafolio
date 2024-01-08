@@ -13,6 +13,7 @@ import { IDataPage } from '../interfaces/dataPage.interface';
 export class DataPageService {
   //dataPage: any = {};
   dataPage: IDataPage = {};
+  dataWorkTeam: any[] = [];
   changed: boolean = false;   //Indicará si ya se cargó la información del servicio
 
   constructor(private httpClient: HttpClient) { 
@@ -28,16 +29,27 @@ export class DataPageService {
       //.subscribe( resp => {
       // .subscribe( (resp: any) => {
       .subscribe( (resp: IDataPage) => {
-        console.log(resp);
+        // console.log(resp);
 
         //De esta forma lo marca como error porque no sabe si 'resp' realmente tiene una propiedad llamada 'ex',
         //Se solucciona o especificando el tipo de resp en el subscribe o de tipo any
         //              o indicnado que de resp se va a tomar la propiedad 'ex' entre corchetes
-        console.log(resp.ex);
+        // console.log(resp.ex);
         //console.log(resp['ex']);
 
         this.changed = true;
         this.dataPage = resp;
       });
-    }
+
+      this.loadWorkTemInfo();
+  }
+
+  loadWorkTemInfo() {
+    this.httpClient.get('https://angular-portfolio-159d0-default-rtdb.firebaseio.com/team.json')
+      .subscribe( (resp: any) => {
+        console.log(resp);
+        this.dataWorkTeam = resp;
+        console.log(this.dataWorkTeam);
+      });
+  }
 }
