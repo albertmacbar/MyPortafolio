@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { DataPageService } from 'src/app/services/data-page.service';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,12 @@ import { TranslocoService } from '@ngneat/transloco';
 
 export class HeaderComponent implements OnInit {
 
-  constructor(private translocoService: TranslocoService) {
+  constructor(private translocoService: TranslocoService,
+              public dataPageService: DataPageService) {
   }
 
   ngOnInit(): void {
+    
   }
 
 }

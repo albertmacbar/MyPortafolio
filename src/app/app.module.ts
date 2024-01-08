@@ -32,7 +32,7 @@ import { ContactComponent } from './pages/contact/contact.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpClientModule,     //Este módulo es el que permite realizar peticiones Put, Get, Patch, Delete, etc a servideres REST
     TranslocoRootModule,
     // NgbModule
   ],

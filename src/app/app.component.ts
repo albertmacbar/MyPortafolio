@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataPageService } from './services/data-page.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'portafolio';
+
+  // En el constructor es donde se realiza la inyección de dependencias, los servicios se pueden inyectar en los conponentes ya que tienen el decorador 'Inyectable'
+  constructor(public dataPageService: DataPageService) {
+
+  }
 }
