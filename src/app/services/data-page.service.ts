@@ -14,7 +14,7 @@ export class DataPageService {
   //dataPage: any = {};
   dataPage: IDataPage = {};
   dataWorkTeam: any[] = [];
-  changed: boolean = false;   //Indicará si ya se cargó la información del servicio
+  charged: boolean = false;   //Indicará si ya se cargó la información del servicio
 
   constructor(private httpClient: HttpClient) { 
     console.log('DataPageService cargado...');
@@ -37,7 +37,7 @@ export class DataPageService {
         // console.log(resp.ex);
         //console.log(resp['ex']);
 
-        this.changed = true;
+        this.charged = true;
         this.dataPage = resp;
       });
 
