@@ -13,25 +13,33 @@
       </svg>
     </label>
     <div class="ae-container-fluid rk-topbar">
-      <h1 class="rk-logo"><a href="index.html">Manalisco, Jalisco<sup>mr</sup></a></h1>
+      <img src="../../../assets/img/manalisco.png" style="float:left;width:60px;height:60px;">
+      <!-- <h1 class="rk-logo">&nbsp;<a href="index.html">Manalisco, Jalisco<sup>mr</sup></a></h1> -->
+      <h1 class="rk-logo">&nbsp;<a routerLink="home">Manalisco, Jalisco<sup>mr</sup></a></h1>
       <nav class="rk-navigation">
         <ul class="rk-menu">
-          <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">{{t('Home')}}</a>
+          <!-- <li class="rk-menu__item"><a href="index.html" class="rk-menu__link">{{t('Home')}}</a> -->
+          <!-- 'routerLinkActive' le indica a Angular que dependiendo de la ruta en la que se encuentre, le va a poner la clase 'active' siempre y cuando esa ruta hace pathMatch o coincide con la del routerLink -->
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="home" class="rk-menu__link">{{t('Home')}}</a>
           </li>
-          <li class="active rk-menu__item"><a href="portfolio.html" class="rk-menu__link">{{t('Portfolio')}}</a>
-          </li>
-          <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">{{t('Blog')}}</a>
+          <!-- <li class="active rk-menu__item"><a href="portfolio.html" class="rk-menu__link">{{t('Portfolio')}}</a> -->
+          <!-- </li> -->
+          <!-- <li class="rk-menu__item"><a href="blog.html" class="rk-menu__link">{{t('Blog')}}</a> -->
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="blog" class="rk-menu__link">{{t('Blog')}}</a>
           </li>
           <li class="rk-menu__item"><a href="#0" class="rk-menu__link">{{t('Pages')}}</a>
             <nav class="rk-menu__sub">
               <ul class="rk-container">
-                <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">{{t('About')}}</a></li>
-                <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">{{t('Documentation')}}</a></li>
+                <!-- <li class="rk-menu__item"><a href="about.html" class="rk-menu__link">{{t('About')}}</a></li> -->
+                <li class="rk-menu__item"><a routerLink="about" class="rk-menu__link">{{t('About')}}</a></li>
+                <!-- <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">{{t('Documentation')}}</a></li> -->
+                <li class="rk-menu__item"><a routerLink="documentation" class="rk-menu__link">{{t('Documentation')}}</a></li>
                 <li class="rk-menu__item"><a href="design-styles.html" class="rk-menu__link">{{t('DesignStyles')}}</a></li>
               </ul>
             </nav>
           </li>
-          <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">{{t('ContactUs')}}</a>
+          <!-- <li class="rk-menu__item"><a href="contact.html" class="rk-menu__link">{{t('ContactUs')}}</a> -->
+          <li routerLinkActive="active" class="rk-menu__item"><a routerLink="contact" class="rk-menu__link">{{t('ContactUs')}}</a>
           </li>
         </ul>
         <form class="rk-search">
