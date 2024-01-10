@@ -47,8 +47,9 @@
             </div>
         </a> -->
         <a *ngFor="let product of productsService.products"
-            routerLink="/item" class="rk-item ae-masonry__item"><img src="assets/img/products/{{ product.url}}.jpg" alt="">
-            <div class="item-meta">
+            [routerLink]="['/item', product.cod]" class="rk-item ae-masonry__item"><img src="assets/img/products/{{ product.url}}.jpg" alt="">
+            <!-- routerLink="/item/{{product.cod}}" class="rk-item ae-masonry__item"><img src="assets/img/products/{{ product.url}}.jpg" alt=""> -->
+            <div [routerLink]="['/item', product.cod]" class="item-meta">
                 <h2>{{product.titulo}}</h2>
                 <p>{{product.categoria}}</p>
             </div>

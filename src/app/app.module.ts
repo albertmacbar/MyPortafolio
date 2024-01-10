@@ -15,6 +15,7 @@ import { ItemComponent } from './pages/item/item.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { DocumentationComponent } from './pages/documentation/documentation.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { SearchComponent } from './pages/search/search.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     ItemComponent,
     BlogComponent,
     DocumentationComponent,
-    ContactComponent
+    ContactComponent,
+    SearchComponent
   ],
   //Los módulos van en los 'imports'
   imports: [

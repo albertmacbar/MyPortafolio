@@ -43,14 +43,20 @@
           <li routerLinkActive="active" class="rk-menu__item"><a routerLink="contact" class="rk-menu__link">{{t('ContactUs')}}</a>
           </li>
         </ul>
-        <form class="rk-search">
-          <input type="text" placeholder="Search" id="urku-search" class="rk-search-field">
+        <!-- <form class="rk-search"> -->
+        <div class="rk-search">
+          <!-- <input type="text" placeholder="Search" id="urku-search" class="rk-search-field"> -->
+          <input type="text" placeholder="{{t('Search')}}" id="urku-search" class="rk-search-field"
+            (keyup.enter)="searchProduct(txtSearch.value)"
+            #txtSearch>
+            <!-- #txtSearch es una referencia o id del input en el html -->
           <label for="urku-search">
             <svg>
               <use xlink:href="assets/img/symbols.svg#icon-search"></use>
             </svg>
           </label>
-        </form>
+        <!-- </form> -->
+        </div>
       </nav>
     </div>
   </header>

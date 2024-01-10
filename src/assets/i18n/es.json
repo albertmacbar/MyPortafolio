@@ -8,7 +8,8 @@
         "ContactUs": "Contáctanos",
         "About": "Acerca",
         "Documentation": "Documentación",
-        "DesignStyles": "Diseño de estilos"
+        "DesignStyles": "Diseño de estilos",
+        "Search": "Buscar"
     },
     "footer": {
         "Title": "Pie de Página",
@@ -19,5 +20,9 @@
         "AllRightReserved": "Todos los derechos reservados.",
         "Spanish": "Español",
         "English": "Inglés"
+    },
+    "item": {
+        "ProductNotExist": "Ese producto no existe",
+        "Summary": "Resumen"
     }
 }

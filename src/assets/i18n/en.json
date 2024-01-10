@@ -8,7 +8,8 @@
         "ContactUs": "Contact us",
         "About": "About",
         "Documentation": "Documentation",
-        "DesignStyles": "Design styles"
+        "DesignStyles": "Design styles",
+        "Search": "Search"
     },
     "footer": {
         "Title": "Footer",
@@ -19,5 +20,9 @@
         "AllRightReserved": "All rights reserved.",
         "Spanish": "Spanish",
         "English": "English"
+    },
+    "item": {
+        "ProductNotExist": "This product doesn't exist",
+        "Summary": "Summary"
     }
 }

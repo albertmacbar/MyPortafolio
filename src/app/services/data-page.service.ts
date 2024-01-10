@@ -17,7 +17,7 @@ export class DataPageService {
   charged: boolean = false;   //Indicará si ya se cargó la información del servicio
 
   constructor(private httpClient: HttpClient) { 
-    console.log('DataPageService cargado...');
+    //console.log('DataPageService cargado...');
 
     // Aquí se necesita crear algo que permita leer el archivo JSON y tomas sus propiedades para que puedan ser utilizadas en las páginas
     // Para ello se necesita un módulo llamado 'HttpClientModule' que necesita ser importado en los 'imports' del 'app.module'
@@ -47,9 +47,9 @@ export class DataPageService {
   loadWorkTemInfo() {
     this.httpClient.get('https://angular-portfolio-159d0-default-rtdb.firebaseio.com/team.json')
       .subscribe( (resp: any) => {
-        console.log(resp);
+        //console.log(resp);
         this.dataWorkTeam = resp;
-        console.log(this.dataWorkTeam);
+        //console.log(this.dataWorkTeam);
       });
   }
 }
